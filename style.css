@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
+
+* {
+  background-color: #fffbf2;
+}
+body {
+  font-family: "Geist", sans-serif;
+}
+
+.logo {
+  color: "#222222";
+  font-weight: 600;
+}
+
+.nav-link {
+  color: "#222222";
+  font-weight: 400;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+
+section.profile {
+  padding-top: 72px;
+}
+
+#profile-text {
+  text-align: left;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: left;
+  margin-top: 1rem;
+  gap: 1.5rem;
+}
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+section [class^="container"] {
+  padding: 4rem 2rem;
+}
+@media screen and (min-width: 1024px) {
+  .navbar-nav {
+    gap: 4rem;
+  }
+
+  section [class^="container"] {
+    padding: 4rem;
+  }
+  nav [class^="container"] {
+    padding: 0 4rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  section.profile {
+    text-align: center;
+  }
+  section.profile .img-fluid {
+    width: 80%;
+  }
+
+  #profile-text {
+    text-align: center;
+  }
+
+  #socials-container {
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+.text-animation span {
+  position: relative;
+}
+
+.text-animation span::before{
+  content: "Software Engineer";
+  color: #bc6c25;
+  animation: words 20s infinite;
+}
+
+.text-animation span::after{
+  content: "";
+  background-color: #fffbf2;
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid #bc6c25;
+  right: -8px;
+  animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 2px solid #bc6c25;
+  }
+}
+
+@keyframes words {
+  0%, 20% {
+    content: "Software Engineer";
+  }
+  21%, 40% {
+    content: "UI/UX Designer";
+  }
+  41%, 60% {
+    content: "Technical Writer";
+  }
+  61%, 80% {
+    content: "Tech Enthusiast";
+  }
+  81%, 100% {
+    content: "CS Student";
+  }
+}
+
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 8px);
+  }
+}
