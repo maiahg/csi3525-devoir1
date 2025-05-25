@@ -85,9 +85,13 @@ section:not(:first-of-type) {
 }
 
 .site-link {
-  color: #bc6c25;
+  color: #0077b6;
   text-decoration: underline;
   text-underline-offset: 0.3rem;
+}
+
+.site-link:hover {
+  color: #023e8a;
 }
 
 section [class^="container"] {
