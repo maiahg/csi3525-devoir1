@@ -42,7 +42,8 @@ section.profile {
   height: 2rem;
 }
 
-p, li {
+p,
+li {
   color: #222222;
   font-weight: 400;
   font-size: 1.2rem;
@@ -55,6 +56,38 @@ p, li {
 
 .work-pic {
   transform: scaleX(-1);
+}
+
+section:not(:first-of-type) {
+  text-align: center;
+}
+
+.card {
+  border: 2px solid #222222;
+  box-shadow: 6px 6px #bc6c25;
+  transition: all 0.4s;
+  max-width: 22rem;
+  margin-inline: auto;
+  background-color: #fffbf2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-text {
+  flex-grow: 1;
+}
+
+.site-link {
+  color: #bc6c25;
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
 }
 
 section [class^="container"] {
@@ -96,13 +129,13 @@ section [class^="container"] {
   position: relative;
 }
 
-.text-animation span::before{
+.text-animation span::before {
   content: "Software Engineer";
   color: #bc6c25;
   animation: words 20s infinite;
 }
 
-.text-animation span::after{
+.text-animation span::after {
   content: "";
   background-color: #fffbf2;
   position: absolute;
@@ -120,19 +153,24 @@ section [class^="container"] {
 }
 
 @keyframes words {
-  0%, 20% {
+  0%,
+  20% {
     content: "Software Engineer";
   }
-  21%, 40% {
+  21%,
+  40% {
     content: "UI/UX Designer";
   }
-  41%, 60% {
+  41%,
+  60% {
     content: "Technical Writer";
   }
-  61%, 80% {
+  61%,
+  80% {
     content: "Tech Enthusiast";
   }
-  81%, 100% {
+  81%,
+  100% {
     content: "CS Student";
   }
 }
